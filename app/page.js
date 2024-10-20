@@ -116,7 +116,7 @@ const TaskManagement = () => {
   useEffect(() => {
     let taskList = localStorage.getItem("data");
     let taskData = JSON.parse(taskList);
-    if (!taskData) {
+    if (!taskData || taskData === null) {
       localStorage.setItem("data", JSON.stringify(data));
     } else {
       localStorage.setItem("data", JSON.stringify(taskData));
