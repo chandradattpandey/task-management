@@ -24,7 +24,20 @@ const TaskManagement = () => {
   const [tableData, setTableData] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const data = [];
+  const data = [
+    {
+      title: "complete assignment",
+      priority: "High",
+      description: "Complete by tomorrow morning at 10 AM",
+      status: "Completed",
+    },
+    {
+      title: "Task Enhancement",
+      priority: "Low",
+      description: "Will start after complete assignment",
+      status: "Pending",
+    },
+  ];
 
   const columns = [
     {
