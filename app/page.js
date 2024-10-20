@@ -118,10 +118,11 @@ const TaskManagement = () => {
     let taskData = JSON.parse(taskList);
     if (!taskData || taskData === null) {
       localStorage.setItem("data", JSON.stringify(data));
+      setTableData(data);
     } else {
       localStorage.setItem("data", JSON.stringify(taskData));
+      setTableData(JSON.parse(taskList));
     }
-    setTableData(JSON.parse(taskList));
   }, []);
 
   const handleEdit = (val, row, index) => {
